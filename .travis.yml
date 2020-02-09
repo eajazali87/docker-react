@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t eajazali87/docker-react:latest -f frontend-app/Dockerfile.dev .
+
+script:
+  - docker run eajazali87/docker-react npm run test -- --coverage

@@ -1,0 +1,11 @@
+docker build .
+docker build -t eajazali87/visits:latest .
+
+To get into an existing container:
+docker exec -it <container_id> sh
+
+To spin up a container from an image:
+docker run -it <image_id> npm run test
+
+Port mapping:
+docker run -p 8000:80 <Image_ID>
